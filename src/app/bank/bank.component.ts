@@ -1,13 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'binding',
-  templateUrl: './binding.component.html'
+  selector: 'bank',
+  templateUrl: './bank.component.html'
 })
-export class BindingComponent  {
-  public name: string = 'Pippo';
+export class BankComponent  {
+  
 
-  public changeName(name: string): void {
-    this.name = name;
-  }
+
 }

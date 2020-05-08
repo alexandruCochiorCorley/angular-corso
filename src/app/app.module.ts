@@ -4,10 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BindingComponent } from './binding/binding.component';
+import { BankService } from './bank/bank.service';
+
+import { BankModule } from './bank/bank.module';
+
+const routes: Routes = [
+  { path: '',   redirectTo: 'binding', pathMatch: 'full' },
+  { path: 'binding', component: BindingComponent },
+  { path: 'bank', component: BankModule },
+];
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, BankModule ],
   declarations: [ AppComponent, BindingComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [ BankService ]
 })
 export class AppModule { }
