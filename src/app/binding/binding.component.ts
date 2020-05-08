@@ -5,6 +5,11 @@ import { Component, Input } from '@angular/core';
   templateUrl: './binding.component.html'
 })
 export class BindingComponent  {
+
+  constructor() {
+console.log('111')
+  }
+
   public name: string = 'Pippo';
 
   public changeName(name: string): void {
