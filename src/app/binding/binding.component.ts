@@ -5,7 +5,9 @@ import { Component, Input } from '@angular/core';
   templateUrl: './binding.component.html'
 })
 export class BindingComponent  {
-  name: string = 'Pippo';
+  public name: string = 'Pippo';
 
-
+  public chancgeName(name: string): void {
+    this.name = name;
+  }
 }
