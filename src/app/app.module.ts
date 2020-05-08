@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BindingComponent } from './binding/binding.component';
@@ -17,11 +17,11 @@ const routes: Routes = [
 
 @NgModule({
   imports: [ 
-    RouterModule.forRoot(routes, {}),
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
     BrowserModule,
     FormsModule
   ],
-  declarations: [ AppComponent, BindingComponent ],
+  declarations: [ AppComponent, BindingComponent, BankComponent ],
   bootstrap: [ AppComponent ],
   providers: [ BankService ]
 })

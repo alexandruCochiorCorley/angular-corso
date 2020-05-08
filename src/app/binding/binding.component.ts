@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 export class BindingComponent  {
 
   constructor() {
-console.log('111')
+    console.log('111')
   }
 
   public name: string = 'Pippo';
