@@ -9,13 +9,14 @@ import { BankService } from './bank.service';
 export class BankComponent  {
 
 	amount: number = 100;
+  rate: number;
   
   constructor(
-    service: BankService
+    private service: BankService
   ) { }
   
-	calc(n: number): number { 
-    return this.service.calcAmount(n);
+	calc(n: number): void { 
+    this.rate = this.service.calcAmount(n);
   }
 
 
