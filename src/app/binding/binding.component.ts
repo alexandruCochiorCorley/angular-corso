@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 export class BindingComponent  {
   public name: string = 'Pippo';
 
-  public chancgeName(name: string): void {
+  public changeName(name: string): void {
     this.name = name;
   }
 }
